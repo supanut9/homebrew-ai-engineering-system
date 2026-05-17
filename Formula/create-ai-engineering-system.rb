@@ -1,10 +1,10 @@
 class CreateAiEngineeringSystem < Formula
   desc "Bootstrap projects from the AI Engineering System"
   homepage "https://github.com/supanut9/ai-engineering-system"
-  url "https://github.com/supanut9/ai-engineering-system/archive/refs/tags/ai-engineering-system-v0.7.0.tar.gz"
-  sha256 "8d5ece50f1e61a0d2ce50013d7577ee9fec02acad98b4e3aca8d438ac337ca91"
+  url "https://github.com/supanut9/ai-engineering-system/archive/refs/tags/ai-engineering-system-v0.7.1.tar.gz"
+  sha256 "7e2d8f5d1729a2fd06e06048e7cbcab2a739692f9bb42f12db31bc6380f05588"
   license "MIT"
-  version "0.7.0"
+  version "0.7.1"
 
   # init-project.sh gates on bash 4+, which macOS's system bash (3.2) does not satisfy.
   depends_on "bash"
