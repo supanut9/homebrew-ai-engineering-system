@@ -14,6 +14,10 @@ class CreateAiEngineeringSystem < Formula
     # Drop the whole system tree into libexec so init-project.sh can resolve
     # SYSTEM_ROOT (templates/, claude/, codex/, tooling/, etc.) at runtime.
     libexec.install Dir["*"]
+    # Dir["*"] excludes dotfiles by default. init-project.sh reads
+    # .release-please-manifest.json for the system version, so we copy it
+    # explicitly.
+    libexec.install ".release-please-manifest.json" if File.exist?(".release-please-manifest.json")
 
     # Thin wrapper that execs init-project.sh through Homebrew's bash 5+.
     (bin/"create-ai-engineering-system").write <<~SH
